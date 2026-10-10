@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffb7d5">
+<title>For Leemong 💗 | From Aadarsh</title>
+<style>
+:root{--pink:#ff78ad;--hot:#f0448a;--pale:#fff0f7;--deep:#8d315a;--paper:#f2d8b5;--ink:#71452f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:Georgia,"Trebuchet MS",sans-serif;color:var(--deep);background:radial-gradient(circle at 15% 10%,#fff 0 2px,transparent 3px),linear-gradient(145deg,#ffe6f1,#ffc5df 48%,#fff0f7);background-size:34px 34px,auto;overflow-x:hidden}
+button,input{font:inherit}
+button{border:0;border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#ff70aa,#f0448a);color:white;font-weight:700;box-shadow:0 7px 16px #e84b8b35;cursor:pointer;transition:transform .2s,filter .2s}
+button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+button:active{transform:scale(.98)}
+button:focus-visible{outline:3px solid #9c2b60;outline-offset:3px}
+.small{font-size:.9rem;opacity:.8}
+#hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.heart{position:absolute;bottom:-40px;animation:rise linear forwards;opacity:.75}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+header,main,footer{position:relative;z-index:1}
+header{text-align:center;padding:18px 14px 0}
+.brand{font-size:.83rem;letter-spacing:.13em;text-transform:uppercase;color:#a94773}
+.music{position:fixed;right:12px;top:12px;z-index:10;padding:10px 14px;font-size:.85rem}
+main{width:min(920px,100%);margin:0 auto;padding:12px 15px 40px}
+.screen{display:none;min-height:78vh;align-items:center;justify-content:center;flex-direction:column;text-align:center;animation:appear .6s ease both}
+.screen.active{display:flex}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.card{width:min(100%,650px);padding:clamp(22px,5vw,42px);border:1px solid #fff9;border-radius:28px;background:#fff8fcde;box-shadow:0 18px 45px #a9437130;backdrop-filter:blur(6px)}
+h1{font-size:clamp(2rem,7vw,3.8rem);line-height:1.08;margin:12px 0;color:#d9387e}
+h2{font-size:clamp(1.5rem,5vw,2.3rem);margin:8px 0 16px;color:#b63870}
+p{line-height:1.75}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#b44d7a}
+.cover-art{font-size:clamp(4rem,18vw,8rem);filter:drop-shadow(0 8px 8px #c7487a22);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-2deg)}}
+.book{position:relative;border-radius:18px;background:#fff9f3;padding:24px 20px;border:2px solid #f2c4d9;box-shadow:inset 7px 0 #f8d7e6,0 10px 0 #d986ad;max-width:620px;width:100%;text-align:left}
+.book:before{content:"";position:absolute;left:15px;top:0;bottom:0;border-left:1px dashed #e8b6cb}
+.book-inner{padding-left:18px}
+.envelope-wrap{perspective:800px;margin:25px auto 20px;width:min(290px,85vw);height:190px;position:relative;cursor:pointer}
+.envelope{position:absolute;inset:15px 0 0;background:#9a603d;border-radius:8px;box-shadow:0 12px 25px #703d3c35;overflow:visible}
+.envelope:before{content:"";position:absolute;left:0;right:0;top:0;margin:auto;border-left:145px solid transparent;border-right:145px solid transparent;border-top:100px solid #b97d52;z-index:2;transform-origin:top;transition:transform .7s}
+.envelope:after{content:"";position:absolute;inset:0;background:linear-gradient(32deg,transparent 49%,#7f4b35 50%,transparent 51%),linear-gradient(-32deg,transparent 49%,#7f4b35 50%,transparent 51%);border-radius:8px}
+.envelope.open:before{transform:rotateX(180deg)}
+.seal{position:absolute;z-index:3;left:50%;top:72px;transform:translateX(-50%);background:#ff9fc8;color:#fff;border:3px solid #ffd9e8;border-radius:50%;width:45px;height:45px;display:grid;place-items:center}
+.env-label{position:absolute;z-index:4;inset:32px 12px auto;color:#fff;font-weight:bold;text-shadow:0 2px 4px #58311f;text-align:center;font-size:1rem}
+.note{background:var(--paper);color:var(--ink);border-radius:5px;padding:24px 22px;text-align:left;box-shadow:0 12px 25px #80502a22;transform:rotate(-.5deg);font-family:"Trebuchet MS",sans-serif}
+.note p{white-space:normal}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+.polaroid{padding:9px 9px 15px;background:white;box-shadow:0 7px 17px #9c4e7220;transform:rotate(-1deg);color:#8e4163}
+.polaroid:nth-child(even){transform:rotate(1.5deg)}
+.polaroid img{display:block;width:100%;height:155px;object-fit:cover;background:#ffe0ed;border-radius:3px}
+.polaroid input{width:100%;margin-top:8px;font-size:.78rem;color:#8e4163}
+.polaroid .caption{font-size:.82rem;margin-top:7px}
+.upload-help{font-size:.86rem;background:#fff0f7;padding:12px;border-radius:12px}
+.reason-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left;margin:20px 0}
+.reason{background:#fff0f7;border:1px solid #ffd0e3;border-radius:14px;padding:13px;font-size:.94rem}
+.reason b{color:#d9387e;margin-right:5px}
+.cake{font-size:clamp(6rem,25vw,10rem);line-height:1.25;filter:drop-shadow(0 10px 10px #a43d6820);transition:transform .4s}
+.cake.lit{animation:wiggle .7s ease}
+@keyframes wiggle{25%{transform:rotate(-7deg) scale(1.08)}75%{transform:rotate(7deg) scale(1.08)}}
+.wheel-wrap{position:relative;width:min(310px,78vw);aspect-ratio:1;margin:24px auto}
+.pointer{position:absolute;z-index:2;top:-9px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:34px solid #9a315e;filter:drop-shadow(0 2px 2px #8d315a33)}
+.wheel{width:100%;height:100%;border:8px solid #fff;border-radius:50%;background:conic-gradient(#ff8fbd 0deg 60deg,#ffd0e4 60deg 120deg,#ff9dc7 120deg 180deg,#ffe0ed 180deg 240deg,#ff8fbd 240deg 300deg,#ffd0e4 300deg 360deg);box-shadow:0 10px 25px #9d3f702b;position:relative;transition:transform 4s cubic-bezier(.12,.78,.14,1);overflow:hidden}
+.wheel span{position:absolute;left:50%;top:50%;width:46%;font-weight:bold;color:#a52f65;font-size:clamp(.85rem,3.6vw,1.1rem);transform-origin:left center;text-align:center}
+.result{font-size:clamp(2.7rem,12vw,5rem);font-weight:bold;color:#e43f86;margin:10px 0}
+.final-heart{font-size:5rem;animation:bob 1.7s ease-in-out infinite}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.secondary{background:#fff;color:#c53676;border:1px solid #ffc1db}
+footer{text-align:center;padding:0 15px 25px;font-size:.82rem;color:#a44b76}
+@media(max-width:520px){main{padding:8px 12px 30px}.screen{min-height:78vh}.card{padding:23px 17px}.photo-grid{gap:10px}.polaroid img{height:130px}.reason-list{grid-template-columns:1fr}.music{top:8px;right:8px;font-size:.78rem;padding:9px 11px}.brand{padding-top:32px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<button class="music" id="musicBtn" type="button" aria-pressed="false">♫ Play music</button>
+<audio id="music" loop preload="none"></audio>
+<header><div class="brand">A tiny pink story made for Leemong 💗</div></header>
+<main>
+<section class="screen active" id="cover">
+ <div class="card">
+  <div class="cover-art">🎀📖</div>
+  <div class="eyebrow">A little birthday fairytale</div>
+  <h1>For my Leemong 💗</h1>
+  <p>Once upon a time, one very special girl made the world a little brighter.</p>
+  <p><strong>Happy Birthday, Leemong!</strong><br>A little surprise, made with love by Aadarsh.</p>
+  <button type="button" onclick="go('letterGate')">Open your storybook 💗</button>
+ </div>
+</section>
+
+<section class="screen" id="letterGate">
+ <div class="card">
+  <div class="eyebrow">Chapter one · a little secret</div>
+  <h2>A letter sealed with love</h2>
+  <p>There's something I wanted you to open slowly…</p>
+  <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Open the love letter">
+   <div class="envelope"><div class="env-label">For Leemong<br>with love 💗</div><div class="seal">💗</div></div>
+  </div>
+  <p class="small">Tap the envelope to open</p>
+  <div class="actions"><button type="button" onclick="openLetter()">Open my letter 💌</button></div>
+ </div>
+</section>
+
+<section class="screen" id="letter">
+ <div class="book"><div class="book-inner">
+  <div class="eyebrow">Chapter two · from Aadarsh</div>
+  <h2>My dearest Leemong 💗</h2>
+  <div class="note">
+   <p>Heyyy my Leemong, birthday princess 💗</p>
+   <p>Today is all about celebrating you — your smile, your heart, your little ways of making ordinary days feel special. I hope this new year of your life brings you so much happiness, peace, laughter, and all the lovely things you deserve.</p>
+   <p>Thank you for being you and for becoming such a precious part of my story. No website or letter could ever fit all the good things I wish for you, but I hope this little surprise makes you smile.</p>
+   <p>Keep shining, keep dreaming, and never forget how special you are to me. Happy Birthday, my Leemong. I love youuu 💗</p>
+   <p style="text-align:right"><strong>Always cheering for you,<br>Aadarsh 💗</strong></p>
+  </div>
+  <div class="actions"><button onclick="go('scrapbook')">Turn the page →</button></div>
+ </div></div>
+</section>
+
+<section class="screen" id="scrapbook">
+ <div class="card">
+  <div class="eyebrow">Chapter three · our memories</div>
+  <h2>Pics that make my heart smile 💗</h2>
+  <p>Swap the sample pictures for your favourite photos. Tap a picture to choose an image from your phone.</p>
+  <div class="photo-grid">
+   <label class="polaroid"><img class="chosen-photo" alt="Memory photo one" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23ffd9e9'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' font-size='48'%3E💗%3C/text%3E%3Ctext x='50%25' y='72%25' text-anchor='middle' font-size='16' fill='%23a34470'%3EOur memory%3C/text%3E%3C/svg%3E"><input type="file" accept="image/*" aria-label="Choose first photo"><div class="caption">My favourite smile 💗</div></label>
+   <label class="polaroid"><img class="chosen-photo" alt="Memory photo two" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23ffe8f1'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' font-size='48'%3E🌸%3C/text%3E%3Ctext x='50%25' y='72%25' text-anchor='middle' font-size='16' fill='%23a34470'%3EAdd a photo%3C/text%3E%3C/svg%3E"><input type="file" accept="image/*" aria-label="Choose second photo"><div class="caption">A moment to keep 🌸</div></label>
+   <label class="polaroid"><img class="chosen-photo" alt="Memory photo three" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23ffd9e9'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' font-size='48'%3E🎀%3C/text%3E%3Ctext x='50%25' y='72%25' text-anchor='middle' font-size='16' fill='%23a34470'%3EAdd a photo%3C/text%3E%3C/svg%3E"><input type="file" accept="image/*" aria-label="Choose third photo"><div class="caption">A little happiness 🎀</div></label>
+   <label class="polaroid"><img class="chosen-photo" alt="Memory photo four" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23ffe8f1'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' font-size='48'%3E✨%3C/text%3E%3Ctext x='50%25' y='72%25' text-anchor='middle' font-size='16' fill='%23a34470'%3EAdd a photo%3C/text%3E%3C/svg%3E"><input type="file" accept="image/*" aria-label="Choose fourth photo"><div class="caption">One more for us ✨</div></label>
+  </div>
+  <p class="upload-help">Note: photos selected here show on this device while the page is open. To include them in the shared website, add the image files to the website folder and update the image paths before publishing.</p>
+  <div class="actions"><button onclick="go('reasons')">10 reasons you're amazing →</button></div>
+ </div>
+</section>
+
+<section class="screen" id="reasons">
+ <div class="card">
+  <div class="eyebrow">Chapter four · a list from my heart</div>
+  <h2>10 little reasons I adore you 💗</h2>
+  <p>And honestly, this list could go on forever…</p>
+  <div class="reason-list">
+   <div class="reason"><b>01</b> Your smile brightens my day.</div>
+   <div class="reason"><b>02</b> You make ordinary moments special.</div>
+   <div class="reason"><b>03</b> Your laugh is contagious.</div>
+   <div class="reason"><b>04</b> You have your own lovely way of being you.</div>
+   <div class="reason"><b>05</b> You make me want to grow.</div>
+   <div class="reason"><b>06</b> Your kindness matters more than you know.</div>
+   <div class="reason"><b>07</b> I love hearing about your day.</div>
+   <div class="reason"><b>08</b> You make memories feel precious.</div>
+   <div class="reason"><b>09</b> You deserve every good thing coming your way.</div>
+   <div class="reason"><b>10</b> Because you're wonderfully, uniquely YOU. 💗</div>
+  </div>
+  <p class="small">You can edit these ten reasons in the HTML to make them even more personal.</p>
+  <button onclick="go('cake')">Your birthday cake awaits 🎂</button>
+ </div>
+</section>
+
+<section class="screen" id="cake">
+ <div class="card">
+  <div class="eyebrow">Chapter five · make a wish</div>
+  <h2>Make a birthday wish, Leemong! 🎂</h2>
+  <div class="cake" id="cakeArt" aria-label="Birthday cake">🎂</div>
+  <p id="cakeText">Take a deep breath, close your eyes, and tap the button when you're ready.</p>
+  <button id="wishBtn" onclick="makeWish()">I made a wish! 💗</button>
+  <div class="actions"><button class="secondary" onclick="go('wheel')">Next surprise →</button></div>
+ </div>
+</section>
+
+<section class="screen" id="wheel">
+ <div class="card">
+  <div class="eyebrow">Chapter six · a tiny love game</div>
+  <h2>How much does Aadarsh love Leemong? 💗</h2>
+  <p>Spin to reveal your very important result.</p>
+  <div class="wheel-wrap"><div class="pointer"></div><div class="wheel" id="wheelDisc">
+   <span style="transform:rotate(30deg) translateY(-50%)">100%</span>
+   <span style="transform:rotate(90deg) translateY(-50%)">100%</span>
+   <span style="transform:rotate(150deg) translateY(-50%)">100%</span>
+   <span style="transform:rotate(210deg) translateY(-50%)">100%</span>
+   <span style="transform:rotate(270deg) translateY(-50%)">100%</span>
+   <span style="transform:rotate(330deg) translateY(-50%)">100%</span>
+  </div></div>
+  <button id="spinBtn" onclick="spinWheel()">SPIN, PRINCESS 💗</button>
+  <div id="spinResult" aria-live="polite"></div>
+  <div class="actions"><button class="secondary" onclick="go('final')">One last surprise →</button></div>
+ </div>
+</section>
+
+<section class="screen" id="final">
+ <div class="card">
+  <div class="final-heart">💗</div>
+  <div class="eyebrow">The final page · but not the end</div>
+  <h1>Happy Birthday, Leemong!</h1>
+  <p>Out of all the little wonders in this world, I'm so happy I got to know you.</p>
+  <p>May your days be filled with love, your dreams find their way to you, and your smile have a million reasons to stay.</p>
+  <p><strong>I love you always. Thank you for being you, and for bringing so much sweetness into my world. You're one of a kind, my birthday princess. 💗</strong></p>
+  <p>With all my love,<br><strong>Aadarsh 💗</strong></p>
+  <button onclick="burstHearts()">Send one last shower of hearts 💗</button>
+  <div class="actions"><button class="secondary" onclick="go('cover')">Read our story again 📖</button></div>
+ </div>
+</section>
+</main>
+<footer>Made with a whole lot of pink hearts, just for Leemong 💗</footer>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+function go(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'});if(id==='final')burstHearts(12)}
+const envelope=document.getElementById('envelope');
+function openLetter(){envelope.classList.add('open');setTimeout(()=>go('letterGate'===document.querySelector('.screen.active')?.id?'letter':'letter'),500)}
+envelope.addEventListener('click',openLetter);
+envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
+document.querySelectorAll('.polaroid input').forEach(input=>input.addEventListener('change',e=>{const file=e.target.files&&e.target.files[0];if(!file)return;const img=e.target.closest('.polaroid').querySelector('img');const reader=new FileReader();reader.onload=()=>img.src=reader.result;reader.readAsDataURL(file)}));
+function makeWish(){const cake=document.getElementById('cakeArt');cake.classList.remove('lit');void cake.offsetWidth;cake.classList.add('lit');document.getElementById('cakeText').textContent='Wish sent to the universe! May this year bring you the sweetest surprises. 💗';document.getElementById('wishBtn').textContent='Wish made! ✨';burstHearts(16)}
+let spinning=false;
+function spinWheel(){if(spinning)return;spinning=true;const disc=document.getElementById('wheelDisc');const btn=document.getElementById('spinBtn');btn.disabled=true;btn.textContent='Spinning… 💗';disc.style.transform='rotate('+(1800+Math.floor(Math.random()*720))+'deg)';document.getElementById('spinResult').innerHTML='';setTimeout(()=>{document.getElementById('spinResult').innerHTML='<div class="result">100% 💗</div><strong>INFINITE LOVEEE!</strong><p>Every slice says 100%, because one number isn't enough.</p>';btn.disabled=false;btn.textContent='SPIN AGAIN 💗';spinning=false;burstHearts(24)},4100)}
+function burstHearts(count=20){const root=document.getElementById('hearts');for(let i=0;i<count;i++){const el=document.createElement('span');el.className='heart';el.textContent=['💗','💕','💖','🎀'][Math.floor(Math.random()*4)];el.style.left=Math.random()*100+'%';el.style.fontSize=(16+Math.random()*24)+'px';el.style.animationDuration=(3+Math.random()*4)+'s';root.appendChild(el);setTimeout(()=>el.remove(),7500)}}
+setInterval(()=>{if(Math.random()>.35){const el=document.createElement('span');el.className='heart';el.textContent='💗';el.style.left=Math.random()*100+'%';el.style.fontSize=(13+Math.random()*15)+'px';el.style.animationDuration=(6+Math.random()*5)+'s';document.getElementById('hearts').appendChild(el);setTimeout(()=>el.remove(),12000)}},850);
+const music=document.getElementById('music');const musicBtn=document.getElementById('musicBtn');let musicOn=false;
+musicBtn.addEventListener('click',async()=>{if(!musicOn){if(!music.src){musicBtn.textContent='Add music file first 🎵';setTimeout(()=>musicBtn.textContent='♫ Play music',2200);return}try{await music.play();musicOn=true;musicBtn.textContent='Ⅱ Pause music';musicBtn.setAttribute('aria-pressed','true')}catch(e){musicBtn.textContent='Tap to play music'} }else{music.pause();musicOn=false;musicBtn.textContent='♫ Play music';musicBtn.setAttribute('aria-pressed','false')}});
+/* Optional music: put your own royalty-free audio file beside this HTML, then uncomment and rename the next line.
+music.src = 'birthday-song.mp3';
+*/
+</script>
+</body>
+</html>
